@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-            
-    // 1. Mobile Menu Toggle Logic
+    // 1. Mobile Menu Toggle
     const mobileMenu = document.getElementById("mobile-menu");
     const navLinks = document.getElementById("navLinks");
     const icon = mobileMenu.querySelector("i");
@@ -14,84 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Close menu when clicking on a link
-    document.querySelectorAll(".nav-item").forEach(item => {
+    document.querySelectorAll(".nav-links a").forEach(item => {
         item.addEventListener("click", () => {
             navLinks.classList.remove("active");
             icon.classList.replace("fa-times", "fa-bars");
         });
     });
 
-    // 2. Sticky Header Shadow Logic
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.style.boxShadow = 'var(--shadow-glass)';
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        } else {
-            header.style.boxShadow = 'none';
-            header.style.background = 'rgba(255, 255, 255, 0.85)';
-        }
-    });
-
-    // 3. Dynamic Data Loading Logic (Replace with Backend API later)
-    const updates = [
-        {
-            icon: "fa-id-card",
-            title: "CUET UG Admit Card Released",
-            date: "August 01, 2026",
-            desc: "The NTA has officially released the phase 2 admit cards. Download securely using your application credentials."
-        },
-        {
-            icon: "fa-chart-line",
-            title: "Allahabad Univ. PGAT Cutoff",
-            date: "July 28, 2026",
-            desc: "Main campus official cutoff scores are now published. Check the portal for your counseling schedule."
-        },
-        {
-            icon: "fa-mobile-screen-button",
-            title: "New Mock Tests Added",
-            date: "July 20, 2026",
-            desc: "We've added 300+ new chapter-wise mock tests in the mobile app. Update to access the premium dashboard."
-        }
-    ];
-
-    const updatesContainer = document.getElementById("updatesContainer");
-    
-    if (updatesContainer) {
-        updatesContainer.innerHTML = updates.map(item => `
-            <div class="update-card">
-                <div class="icon-box">
-                    <i class="fas ${item.icon}"></i>
-                </div>
-                <h3 style="font-size: 1.25rem;">${item.title}</h3>
-                <p style="font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 8px;">
-                    <i class="far fa-clock"></i> ${item.date}
-                </p>
-                <p>${item.desc}</p>
-                <a href="#" class="card-link">Read Full Notice <i class="fas fa-arrow-right"></i></a>
-            </div>
-        `).join('');
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
-    // === LATEST UPDATE TICKER LOGIC ===
+    // 2. Seamless Ticker Animation
     const tickerContent = document.getElementById("tickerContent");
-    const tickerWrapper = document.querySelector(".ticker-wrapper");
+    const tickerBar = document.querySelector(".ticker-bar");
     
-    if (tickerContent && tickerWrapper) {
-        // Text ko clone kar rahe hain taaki gol-gol ghumta rahe (Seamless Loop)
+    if (tickerContent) {
+        // Clone for infinite loop
         tickerContent.innerHTML += tickerContent.innerHTML;
         
         let position = 0;
-        let speed = 1.2; // Speed yahan se ghata/badha sakte ho (Jaise 2 karoge toh fast chalega)
+        let speed = 1.0; 
         let isPaused = false;
 
         function scrollTicker() {
             if (!isPaused) {
                 position -= speed;
-                
-                // Jab adha text ghum jaye, toh wapas shuru se start kardo
                 if (Math.abs(position) >= tickerContent.scrollWidth / 2) {
                     position = 0;
                 }
@@ -100,15 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
             requestAnimationFrame(scrollTicker);
         }
 
-        // Animation shuru karo
         scrollTicker();
 
-        // Mouse Hover karne par chalta hua text ruk jayega
-        tickerWrapper.addEventListener("mouseenter", () => isPaused = true);
-        tickerWrapper.addEventListener("mouseleave", () => isPaused = false);
-        
-        // Mobile me touch karne par bhi ruk jayega
-        tickerWrapper.addEventListener("touchstart", () => isPaused = true);
-        tickerWrapper.addEventListener("touchend", () => isPaused = false);
+        tickerBar.addEventListener("mouseenter", () => isPaused = true);
+        tickerBar.addEventListener("mouseleave", () => isPaused = false);
+        tickerBar.addEventListener("touchstart", () => isPaused = true);
+        tickerBar.addEventListener("touchend", () => isPaused = false);
     }
 });
