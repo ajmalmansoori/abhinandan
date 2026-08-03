@@ -74,3 +74,41 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join('');
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // === LATEST UPDATE TICKER LOGIC ===
+    const tickerContent = document.getElementById("tickerContent");
+    const tickerWrapper = document.querySelector(".ticker-wrapper");
+    
+    if (tickerContent && tickerWrapper) {
+        // Text ko clone kar rahe hain taaki gol-gol ghumta rahe (Seamless Loop)
+        tickerContent.innerHTML += tickerContent.innerHTML;
+        
+        let position = 0;
+        let speed = 1.2; // Speed yahan se ghata/badha sakte ho (Jaise 2 karoge toh fast chalega)
+        let isPaused = false;
+
+        function scrollTicker() {
+            if (!isPaused) {
+                position -= speed;
+                
+                // Jab adha text ghum jaye, toh wapas shuru se start kardo
+                if (Math.abs(position) >= tickerContent.scrollWidth / 2) {
+                    position = 0;
+                }
+                tickerContent.style.transform = `translateX(${position}px)`;
+            }
+            requestAnimationFrame(scrollTicker);
+        }
+
+        // Animation shuru karo
+        scrollTicker();
+
+        // Mouse Hover karne par chalta hua text ruk jayega
+        tickerWrapper.addEventListener("mouseenter", () => isPaused = true);
+        tickerWrapper.addEventListener("mouseleave", () => isPaused = false);
+        
+        // Mobile me touch karne par bhi ruk jayega
+        tickerWrapper.addEventListener("touchstart", () => isPaused = true);
+        tickerWrapper.addEventListener("touchend", () => isPaused = false);
+    }
+});
