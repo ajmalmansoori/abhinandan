@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUET UG 2026 Final Scorecard Released - Abhinandan Updates</title>
+    
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* === COMMON CSS === */
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #3730A3;
+            --bg-body: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--bg-body); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* === HEADER === */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95); padding: 15px 30px; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+        .logo i { color: var(--primary); }
+        .nav-links { display: flex; gap: 24px; font-weight: 600; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+        /* === MAIN POST CONTAINER === */
+        .post-container { max-width: 900px; margin: 30px auto 60px; padding: 0 20px; flex: 1; }
+        
+        .breadcrumb { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 500; }
+        .breadcrumb a { color: var(--primary); }
+
+        .post-box { background: var(--surface); border-radius: var(--radius-lg); padding: 40px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .post-title { font-size: 2.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; line-height: 1.3; }
+        .post-meta { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px; display: flex; gap: 20px; border-bottom: 1px solid var(--border); padding-bottom: 20px; font-weight: 500; }
+        
+        .post-text { color: var(--text-muted); margin-bottom: 25px; font-size: 1.1rem; }
+
+        .info-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 35px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+        .info-table th, .info-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
+        .info-table tr:last-child th, .info-table tr:last-child td { border-bottom: none; }
+        .info-table th { background: #F1F5F9; color: var(--text-dark); width: 40%; font-weight: 700; }
+        .info-table td { color: var(--text-muted); font-weight: 500; }
+
+        /* =========================================
+           ✨ PREMIUM SECTION: SQUIRCLE DOWNLOAD LINKS
+        ========================================= */
+        .important-links {
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.15);
+            border: 2px solid #EEF2FF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .important-links::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(90deg, #4F46E5, #10B981, #F59E0B);
+        }
+
+        .important-links h3 { color: var(--text-dark); margin-bottom: 25px; font-size: 1.5rem; font-weight: 800; text-align: center; }
+        
+        .squircle-btn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .squircle-btn {
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .squircle-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -8px rgba(79, 70, 229, 0.3);
+            border-color: #E0E7FF;
+        }
+
+        .sq-icon {
+            width: 52px; height: 52px; min-width: 52px;
+            border-radius: 14px; display: flex; justify-content: center;
+            align-items: center; font-size: 1.4rem; transition: var(--transition);
+        }
+
+        .squircle-btn:hover .sq-icon {
+            transform: scale(1.08); filter: brightness(0.95);
+        }
+
+        .sq-text { display: flex; flex-direction: column; justify-content: center; text-align: left; }
+        .sq-text h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; line-height: 1.2; }
+        .sq-text p { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin: 0; }
+        
+        .sq-text span { font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+
+        /* =========================================
+           🚀 PREMIUM SECTION: PROMO BANNERS
+        ========================================= */
+        .promo-banner {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 30px 35px; border-radius: var(--radius-lg); margin-top: 25px;
+            position: relative; overflow: hidden;
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.2);
+        }
+        
+        .promo-app { background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%); border: 1px solid #312E81; }
+        .promo-telegram { background: linear-gradient(135deg, #0088cc 0%, #005580 100%); border: 1px solid #005580; }
+
+        .bg-icon { position: absolute; right: -20px; bottom: -30px; font-size: 10rem; opacity: 0.05; color: white; transform: rotate(-15deg); pointer-events: none; }
+
+        .promo-text { position: relative; z-index: 2; max-width: 60%; }
+        
+        .promo-badge {
+            display: inline-block; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 14px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 700; margin-bottom: 12px;
+        }
+        .badge-yellow { color: #FBBF24; }
+        .badge-white { color: #E0F2FE; }
+
+        .promo-text h4 { font-size: 1.6rem; margin-bottom: 8px; color: #FFFFFF; font-weight: 800; line-height: 1.2; }
+        .promo-text p { font-size: 1rem; color: #94A3B8; font-weight: 500; margin: 0; }
+        .promo-telegram .promo-text p { color: #BAE6FD; }
+
+        /* ✨ NEW: SQUIRCLE PROMO BUTTONS */
+        .promo-sq-btn {
+            background: #FFFFFF; display: inline-flex; align-items: center; gap: 12px;
+            padding: 8px 24px 8px 10px; border-radius: 16px; position: relative; z-index: 2;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: var(--transition); text-decoration: none;
+        }
+        
+        .promo-sq-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        }
+
+        .promo-sq-icon {
+            width: 46px; height: 46px; min-width: 46px; border-radius: 12px;
+            display: flex; justify-content: center; align-items: center; font-size: 1.3rem;
+        }
+
+        /* === FOOTER === */
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 30px 20px; text-align: center; margin-top: auto; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; font-weight: 600; }
+        .copyright { color: var(--text-muted); font-size: 0.95rem; }
+        .developer { font-weight: 700; color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .post-title { font-size: 1.8rem; }
+            .promo-banner { flex-direction: column; text-align: center; padding: 30px 20px; gap: 20px; }
+            .promo-text { max-width: 100%; margin-bottom: 5px; }
+            .bg-icon { display: none; }
+            .squircle-btn-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-layer-group"></i> Abhinandan Updates
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="latest-jobs.html">Latest Job</a></li>
+            <li><a href="result.html" class="active">Result</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main class="post-container">
+        
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <i class="fas fa-angle-right"></i> <a href="result.html">Results</a> <i class="fas fa-angle-right"></i> CUET UG 2026 Scorecard
+        </div>
+
+        <!-- Post Content -->
+        <article class="post-box">
+            <h1 class="post-title">NTA CUET UG Final Scorecard 2026 Released: Direct Link, Cutoff & Counseling Details</h1>
+            
+            <div class="post-meta">
+                <span><i class="far fa-calendar-alt"></i> Posted: 04 August 2026</span>
+                <span><i class="fas fa-folder-open"></i> Category: Result</span>
+            </div>
+
+            <p class="post-text">National Testing Agency (NTA) has officially released the final scorecard and results for the Common University Entrance Test (CUET UG) 2026. Candidates who appeared for the examination can now check their normalized scores and percentiles through the direct link provided below. This score will be strictly used for admission into central and state universities like Allahabad University, BHU, and DU.</p>
+
+            <h3 style="margin-bottom: 15px; color: var(--text-dark); font-weight: 800;">CUET UG Result 2026: Details</h3>
+            <table class="info-table">
+                <tr>
+                    <th>Exam Conducting Body</th>
+                    <td>National Testing Agency (NTA)</td>
+                </tr>
+                <tr>
+                    <th>Examination Name</th>
+                    <td>CUET UG - 2026</td>
+                </tr>
+                <tr>
+                    <th>Result Status</th>
+                    <td><span style="background: #D1FAE5; color: #059669; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">Declared & Available</span></td>
+                </tr>
+                <tr>
+                    <th>Required Details</th>
+                    <td>Application Number & Date of Birth</td>
+                </tr>
+            </table>
+
+            <!-- ✨ PREMIUM SQUIRCLE DOWNLOAD LINKS SECTION -->
+            <div class="important-links">
+                <h3><i class="fas fa-link" style="color: var(--primary);"></i> Important Direct Links</h3>
+                
+                <div class="squircle-btn-grid">
+                    <!-- Link 1: Download Scorecard -->
+                    <a href="#" class="squircle-btn">
+                        <div class="sq-icon" style="background: #E0E7FF; color: #4F46E5;">
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </div>
+                        <div class="sq-text">
+                            <h4>Download Scorecard</h4>
+                            <p>Server 1 (Direct Link)</p>
+                        </div>
+                    </a>
+
+                    <!-- Link 2: Official Website -->
+                    <a href="#" class="squircle-btn">
+                        <div class="sq-icon" style="background: #D1FAE5; color: #059669;">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="sq-text">
+                            <h4>Official CUET Portal</h4>
+                            <p>nta.ac.in/cuet-ug</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 🚀 PREMIUM PROMO BANNERS -->
+            
+            <!-- Learnify Classes App Banner -->
+            <div class="promo-banner promo-app">
+                <i class="fas fa-mobile-alt bg-icon"></i>
+                <div class="promo-text">
+                    <div class="promo-badge badge-yellow"><i class="fas fa-star"></i> 4.9/5 Rating</div>
+                    <h4>Targeting Top Universities?</h4>
+                    <p>Get counseling guidance, premium e-books, and cut-off updates directly on the Learnify Classes App.</p>
+                </div>
+                <!-- Updated Button: App Store Style Squircle -->
+                <a href="#" class="promo-sq-btn">
+                    <div class="promo-sq-icon" style="background: #E0E7FF; color: #4F46E5;">
+                        <i class="fab fa-google-play"></i>
+                    </div>
+                    <div class="sq-text">
+                        <span>GET IT ON</span>
+                        <h4 style="color: #0F172A; font-size: 1.1rem;">Google Play</h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CUET Warriors Telegram Banner -->
+            <div class="promo-banner promo-telegram">
+                <i class="fab fa-telegram-plane bg-icon"></i>
+                <div class="promo-text">
+                    <div class="promo-badge badge-white"><i class="fas fa-users"></i> Join 50,000+ Students</div>
+                    <h4>Connect with Fellow Aspirants</h4>
+                    <p>Join the CUET Warriors 2026 community for real-time admission updates, mock tests, and notes.</p>
+                </div>
+                <!-- Updated Button: Telegram Style Squircle -->
+                <a href="https://t.me/cuetwarriors2026" class="promo-sq-btn" target="_blank">
+                    <div class="promo-sq-icon" style="background: #E0F2FE; color: #0284C7;">
+                        <i class="fab fa-telegram-plane"></i>
+                    </div>
+                    <div class="sq-text">
+                        <span>JOIN NOW ON</span>
+                        <h4 style="color: #0F172A; font-size: 1.1rem;">Telegram</h4>
+                    </div>
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Abhinandan Updates. All rights reserved.</p>
+            <p>Designed by <span class="developer">Ajmal Mansoori</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
