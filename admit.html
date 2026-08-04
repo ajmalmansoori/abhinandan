@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* === DESIGN SYSTEM === */
+        :root {
+            --primary: #6366F1;          /* Indigo matching the screenshot arrows/link */
+            --bg-body: #F3F4F6;          /* Light gray background */
+            --surface: #FFFFFF;
+            --text-dark: #374151;        /* Dark gray text */
+            --text-light: #9CA3AF;
+            --border: #E5E7EB;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius-lg: 12px;
+            --transition: all 0.2s ease-in-out;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 70px; /* Space for fixed header */
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* === 1. HEADER === */
+        .site-header {
+            position: fixed;
+            top: 0; width: 100%; z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-content {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            gap: 10px;
+        }
+        
+        .header-content i { color: var(--primary); }
+
+        /* === 2. MAIN SECTION (SCREENSHOT UI) === */
+        .main-content {
+            flex: 1; /* Pushes footer to the bottom */
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .results-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Top Border Line from Screenshot */
+        .top-divider {
+            height: 1px;
+            background-color: var(--border);
+            margin-bottom: 24px;
+            width: 100%;
+        }
+
+        /* List Items */
+        .update-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .update-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .update-item:hover {
+            color: var(--primary);
+        }
+
+        .update-item i {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        /* Show More Button */
+        .show-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .show-more-btn:hover {
+            opacity: 0.8;
+            transform: translateX(4px);
+        }
+
+        /* === 3. FOOTER === */
+        .site-footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Abhinandan Updates
+        </div>
+    </header>
+
+    <!-- Main Section (Matching the Screenshot) -->
+    <main class="main-content">
+        <div class="results-card">
+            
+            <div class="top-divider"></div>
+
+            <ul class="update-list">
+                <li class="update-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    CUET UG Final Scorecard 2026 Released
+                </li>
+                <li class="update-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Allahabad University Entrance Result Declared
+                </li>
+                <li class="update-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    UP Board Class 12th Examination Results
+                </li>
+                <li class="update-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    SSC CHSL Tier 1 Result and Cutoff
+                </li>
+                <li class="update-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    UP Police Constable Final Merit List
+                </li>
+            </ul>
+
+            <div class="show-more-btn">
+                Show more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        &copy; 2026 Abhinandan Updates. All rights reserved.
+    </footer>
+
+</body>
+</html>
