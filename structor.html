@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPPSC Pre 2026 Online Form - Abhinandan Updates</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* === MODERN SAAS / PREMIUM DESIGN SYSTEM === */
+        :root {
+            --primary: #4F46E5;          
+            --primary-dark: #4338CA;
+            --primary-light: #EEF2FF;
+            --primary-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            --secondary: #0EA5E9;        
+            --accent-green: #10B981;
+            --accent-red: #EF4444;
+            --bg-body: #F8FAFC;          
+            --surface: #FFFFFF;
+            --text-dark: #0F172A;        
+            --text-muted: #475569;       
+            --text-light: #94A3B8;       
+            --border: #E2E8F0;           
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-full: 9999px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-muted);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            padding-top: 80px; 
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* === TOP NAVBAR === */
+        .header-wrapper {
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar {
+            max-width: 1100px; margin: auto;
+            display: flex; justify-content: space-between; 
+            align-items: center; padding: 16px 24px;
+        }
+
+        .logo {
+            font-size: 1.25rem; font-weight: 800; color: var(--text-dark);
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .logo i { color: var(--primary); }
+
+        /* === POST HEADER === */
+        .post-header {
+            max-width: 1100px; margin: 40px auto 20px; padding: 0 24px;
+            text-align: center;
+        }
+        .post-title {
+            color: var(--text-dark); font-size: 2.2rem; font-weight: 800; margin-bottom: 10px;
+        }
+        .post-meta {
+            color: var(--text-light); font-size: 0.95rem; margin-bottom: 30px;
+        }
+
+        /* === CONTENT LAYOUT === */
+        .content-container {
+            max-width: 1100px; margin: 0 auto 60px; padding: 0 24px;
+            display: flex; flex-direction: column; gap: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            color: var(--text-dark); font-size: 1.4rem; font-weight: 700;
+            margin-bottom: 20px; padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            display: flex; align-items: center; gap: 10px;
+        }
+        
+        .card h2 i { color: var(--primary); }
+
+        /* === GRID FOR DATES & FEES === */
+        .info-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+        }
+
+        .info-list li {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 0; border-bottom: 1px dashed var(--border);
+        }
+        .info-list li:last-child { border-bottom: none; }
+        .info-list strong { color: var(--text-dark); }
+        .highlight-text { color: var(--accent-red); font-weight: 600; }
+
+        /* === ELIGIBILITY TABLE === */
+        .data-table {
+            width: 100%; border-collapse: collapse; margin-top: 10px;
+        }
+        .data-table th, .data-table td {
+            padding: 14px; text-align: left; border: 1px solid var(--border);
+        }
+        .data-table th {
+            background-color: var(--primary-light); color: var(--primary-dark); font-weight: 700;
+        }
+
+        /* === IMPORTANT LINKS BUTTONS === */
+        .link-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .btn-link {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: var(--primary-light); color: var(--primary-dark);
+            padding: 12px 20px; border-radius: var(--radius-md); font-weight: 600;
+            transition: var(--transition); text-align: center; border: 1px solid var(--border);
+        }
+        .btn-link:hover {
+            background: var(--primary); color: white; transform: translateY(-2px);
+        }
+        .btn-apply-main {
+            background: var(--accent-green); color: white; border: none; grid-column: span 2; padding: 16px; font-size: 1.1rem;
+        }
+        .btn-apply-main:hover { background: #059669; }
+
+        @media (max-width: 768px) {
+            .link-grid { grid-template-columns: 1fr; }
+            .btn-apply-main { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-wrapper">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Abhinandan Updates
+            </a>
+        </nav>
+    </header>
+
+    <!-- Post Title -->
+    <div class="post-header">
+        <h1 class="post-title">UPPSC Pre 2026 Online Form Notification</h1>
+        <p class="post-meta"><i class="fa-regular fa-calendar"></i> Posted on: 04 August 2026 | <i class="fa-solid fa-pen-nib"></i> By Abhinandan Updates</p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="content-container">
+        
+        <!-- Short Information -->
+        <div class="card">
+            <h2><i class="fa-solid fa-circle-info"></i> Short Information</h2>
+            <p>Uttar Pradesh Public Service Commission (UPPSC) has released the notification for the Combined State / Upper Subordinate Services (PCS) Examination 2026. Any candidate who is interested in this UPPSC Pre 2026 exam and fulfills the eligibility can apply online. Read the notification for eligibility, age limit, selection procedure, syllabus, pattern, pay scale and all other information in UPPSC PCS Pre Recruitment 2026.</p>
+        </div>
+
+        <div class="info-grid">
+            <!-- Important Dates -->
+            <div class="card">
+                <h2><i class="fa-solid fa-calendar-check"></i> Important Dates</h2>
+                <ul class="info-list">
+                    <li><span>Application Begin</span> <strong>01/01/2026</strong></li>
+                    <li><span>Last Date for Apply Online</span> <strong class="highlight-text">29/01/2026</strong></li>
+                    <li><span>Pay Exam Fee Last Date</span> <strong>29/01/2026</strong></li>
+                    <li><span>Correction Last Date</span> <strong>09/02/2026</strong></li>
+                    <li><span>Pre Exam Date</span> <strong>March 2026 (Expected)</strong></li>
+                    <li><span>Admit Card Available</span> <strong>Before Exam</strong></li>
+                </ul>
+            </div>
+
+            <!-- Application Fee -->
+            <div class="card">
+                <h2><i class="fa-solid fa-wallet"></i> Application Fee</h2>
+                <ul class="info-list">
+                    <li><span>General / OBC</span> <strong>₹ 125/-</strong></li>
+                    <li><span>SC / ST</span> <strong>₹ 65/-</strong></li>
+                    <li><span>PH Candidates</span> <strong>₹ 25/-</strong></li>
+                </ul>
+                <p style="margin-top: 15px; font-size: 0.9rem;"><em>Pay the Exam Fee Through SBI Mops Debit Card, Credit Card, Net Banking or SBI E Challan Mode Only.</em></p>
+            </div>
+        </div>
+
+        <!-- Age Limit -->
+        <div class="card">
+            <h2><i class="fa-solid fa-user-clock"></i> Age Limit (As on 01/07/2026)</h2>
+            <ul class="info-list">
+                <li><span>Minimum Age</span> <strong>21 Years</strong></li>
+                <li><span>Maximum Age</span> <strong>40 Years</strong></li>
+            </ul>
+            <p style="margin-top: 15px; font-size: 0.9rem;"><em>Age Relaxation Extra as per UPPSC Combined State / Upper Subordinate Services PCS Examination 2026 Rules.</em></p>
+        </div>
+
+        <!-- Vacancy Details -->
+        <div class="card">
+            <h2><i class="fa-solid fa-list-check"></i> Vacancy Details & Eligibility</h2>
+            <div style="overflow-x:auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Exam Name</th>
+                            <th>Total Posts</th>
+                            <th>UPPSC PCS 2026 Eligibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Combined State / Upper Subordinate Services (PCS)</td>
+                            <td><strong>250+ (Expected)</strong></td>
+                            <td>Bachelor Degree in Any Stream in Any Recognized University in India.<br><br><em>For Post Wise Eligibility Details Read the Full Notification.</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Important Links -->
+        <div class="card">
+            <h2><i class="fa-solid fa-link"></i> Important Links</h2>
+            <div class="link-grid">
+                <a href="#" class="btn-link btn-apply-main"><i class="fa-solid fa-pen-to-square"></i> Apply Online</a>
+                <a href="#" class="btn-link"><i class="fa-solid fa-money-check-dollar"></i> Pay Exam Fee</a>
+                <a href="#" class="btn-link"><i class="fa-solid fa-file-pdf"></i> Download Notification</a>
+                <a href="#" class="btn-link"><i class="fa-solid fa-globe"></i> Official Website</a>
+                <a href="#" class="btn-link"><i class="fa-brands fa-telegram"></i> Join Telegram Channel</a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
