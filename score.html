@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Exam Results 2026 - Abhinandan Updates</title>
+    
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* === DESIGN SYSTEM & COMMON CSS === */
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --bg-body: #F4F6F9;
+            --surface: #FFFFFF;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --transition: all 0.3s ease;
+            
+            /* Status Colors */
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--bg-body); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* === HEADER === */
+        .navbar {
+            background: var(--surface); padding: 15px 30px; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        .nav-links { display: flex; gap: 20px; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .header-right { display: flex; align-items: center; gap: 15px; }
+        .search-box { display: flex; border: 1px solid var(--border); border-radius: 20px; padding: 5px 15px; background: var(--bg-body); }
+        .search-box input { border: none; background: transparent; outline: none; padding-right: 10px; }
+        .search-box button { background: transparent; border: none; color: var(--primary); cursor: pointer; }
+
+        /* === PAGE TITLE & FILTERS === */
+        .page-header { max-width: 1100px; margin: 40px auto 20px; padding: 0 20px; }
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; }
+        .page-desc { color: var(--text-muted); font-size: 1rem; }
+        
+        .filters { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+        .filter-btn {
+            background: var(--surface); border: 1px solid var(--border); padding: 8px 16px;
+            border-radius: 20px; cursor: pointer; font-weight: 500; transition: var(--transition);
+        }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* === RESULTS GRID SECTION === */
+        .results-container { max-width: 1100px; margin: 0 auto 60px; padding: 0 20px; flex: 1; }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+
+        .result-card {
+            background: var(--surface); border-radius: var(--radius-lg); padding: 20px;
+            border: 1px solid var(--border); box-shadow: var(--shadow-sm); transition: var(--transition);
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .result-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        
+        .status-badge {
+            font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 12px;
+        }
+        .status-new { background: #D1FAE5; color: var(--success); }
+        .status-updated { background: #FEF3C7; color: var(--warning); }
+        .status-soon { background: #FEE2E2; color: var(--danger); }
+
+        .date { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; }
+
+        .exam-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+        .exam-org { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
+
+        .btn-check {
+            display: block; text-align: center; background: var(--primary-dark); color: white;
+            padding: 10px; border-radius: var(--radius-md); font-weight: 600; transition: var(--transition);
+        }
+        .btn-check:hover { background: var(--primary); }
+
+        /* === FOOTER === */
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 30px 20px; text-align: center; margin-top: auto; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; font-weight: 500; }
+        .footer-links a:hover { color: var(--primary); }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+        .developer { font-weight: 600; color: var(--primary); }
+        
+        @media (max-width: 768px) {
+            .nav-links, .search-box { display: none; } /* Add your mobile menu toggle logic later */
+            .page-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-layer-group"></i> Abhinandan Updates
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="latest-jobs.html">Latest Job</a></li>
+            <li><a href="admit-card.html">Admit Card</a></li>
+            <li><a href="result.html" class="active">Result</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+        </ul>
+        <div class="header-right">
+            <div class="search-box">
+                <input type="text" placeholder="Search Result...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header & Filters -->
+    <section class="page-header">
+        <h1 class="page-title">Latest Exam Results 2026</h1>
+        <p class="page-desc">Check your exam scores, merit lists, and cut-offs for all major examinations.</p>
+        
+        <div class="filters">
+            <button class="filter-btn active">All Results</button>
+            <button class="filter-btn">University Exams</button>
+            <button class="filter-btn">Board Exams</button>
+            <button class="filter-btn">Competitive / Sarkari</button>
+        </div>
+    </section>
+
+    <!-- Results Grid -->
+    <main class="results-container">
+        <div class="result-grid">
+            
+            <!-- Result Card 1 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-new">Declared Today</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Aug 2026</span>
+                    </div>
+                    <h2 class="exam-title">CUET UG 2026 Final Scorecard & Rank List</h2>
+                    <p class="exam-org"><i class="fas fa-university"></i> National Testing Agency (NTA)</p>
+                </div>
+                <a href="#" class="btn-check"><i class="fas fa-external-link-alt"></i> Check Result</a>
+            </div>
+
+            <!-- Result Card 2 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-new">New Merit List</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Aug 2026</span>
+                    </div>
+                    <h2 class="exam-title">Allahabad University Entrance PGAT Main Campus Cutoff</h2>
+                    <p class="exam-org"><i class="fas fa-university"></i> University of Allahabad</p>
+                </div>
+                <a href="#" class="btn-check"><i class="fas fa-external-link-alt"></i> Check Cutoff</a>
+            </div>
+
+            <!-- Result Card 3 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-updated">Link Updated</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Jul 2026</span>
+                    </div>
+                    <h2 class="exam-title">SSC CHSL Tier 1 Result & Cutoff Marks</h2>
+                    <p class="exam-org"><i class="fas fa-building"></i> Staff Selection Commission</p>
+                </div>
+                <a href="#" class="btn-check"><i class="fas fa-external-link-alt"></i> Download PDF</a>
+            </div>
+
+            <!-- Result Card 4 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-soon">Coming Soon</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Sep 2026</span>
+                    </div>
+                    <h2 class="exam-title">UP Police Constable Final Merit List 2026</h2>
+                    <p class="exam-org"><i class="fas fa-shield-alt"></i> UPPRPB</p>
+                </div>
+                <a href="#" class="btn-check" style="background: var(--text-muted);"><i class="fas fa-bell"></i> Notify Me</a>
+            </div>
+            
+            <!-- Result Card 5 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-new">Available</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Jun 2026</span>
+                    </div>
+                    <h2 class="exam-title">UP Board Class 12th & 10th Examination Results</h2>
+                    <p class="exam-org"><i class="fas fa-book-open"></i> UPMSP, Prayagraj</p>
+                </div>
+                <a href="#" class="btn-check"><i class="fas fa-external-link-alt"></i> Check Result</a>
+            </div>
+
+            <!-- Result Card 6 -->
+            <div class="result-card">
+                <div>
+                    <div class="card-header">
+                        <span class="status-badge status-new">Declared</span>
+                        <span class="date"><i class="far fa-calendar-alt"></i> Aug 2026</span>
+                    </div>
+                    <h2 class="exam-title">CTET July 2026 Paper I & II Results</h2>
+                    <p class="exam-org"><i class="fas fa-chalkboard-teacher"></i> CBSE</p>
+                </div>
+                <a href="#" class="btn-check"><i class="fas fa-external-link-alt"></i> Check Score</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Disclaimer</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Abhinandan Updates. All rights reserved.</p>
+            <p>Designed by <span class="developer">Ajmal Mansoori</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
